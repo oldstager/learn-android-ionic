@@ -1,0 +1,25 @@
+<div id="app">
+  Halo {{ name }}, detik berjalan: {{ counter }}
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        name: "Vue",
+        counter: 0
+      };
+    },
+    mounted() {
+      setInterval(() => {
+        this.counter++
+      }, 1000)
+    }
+  };
+
+  createApp(App).mount("#app");
+</script>

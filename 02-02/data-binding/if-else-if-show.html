@@ -1,0 +1,26 @@
+<div id="app">
+  <div v-if="angka > 80">Nilai A</div>
+  <div v-else-if="angka > 70">Nilai B</div>
+  <div v-else-if="angka > 40">Nilai C</div>
+  <div v-else-if="angka > 20">Nilai D</div>
+  <div v-else>Nilai E</div>
+  <div v-show="bagus">Bagus!</div>
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        angka: 85,
+        bagus: true
+      };
+    },
+  };
+
+  createApp(App).mount("#app");
+</script>
+

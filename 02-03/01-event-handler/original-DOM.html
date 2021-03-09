@@ -1,0 +1,34 @@
+<div id="app">
+  <input v-model="isianTeks" placeholder="ketikkan sesuatu" />
+  <button @click="cekIsianTeks($event)">Kirim</button>
+  <p>
+    Anda mengisikan: {{ isianTeks }}
+  </p>
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        isianTeks: ''
+      };
+    },
+    methods: {
+      cekIsianTeks(event) {
+        if (this.isianTeks === '') {
+          event.preventDefault()
+          alert('Isikan teks terlebih dahulu ' + event)
+        } else {
+          alert('Terima kasih sudah mengisi teks ' + event)
+        }
+      }
+    }
+  };
+
+  createApp(App).mount("#app");
+</script>
+

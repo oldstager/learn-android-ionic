@@ -1,0 +1,29 @@
+<div id="app">
+  <input v-model="angka1" placeholder="0" @change="hitung( angka1, angka2 )"> x 
+  <input v-model="angka2" placeholder="0" @change="hitung( angka1, angka2 )">
+
+  <p>{{ angka1 }} x {{ angka2 }} = {{ hasil }}</p>
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        angka1: 0,
+        angka2: 0,
+        hasil: 0
+      };
+    },
+    methods: {
+      hitung(a1, a2) {
+        this.hasil = a1 * a2;
+      }
+    }    
+  };
+
+  createApp(App).mount("#app");
+</script>

@@ -1,0 +1,7 @@
+{
+  "name": "nativeAPI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "nidn": 123456789,
+    "nama": "Dosen 1",
+    "tglLahir": "10-05-1980",
+    "alamat": "Alamat Dosen 1",
+    "homebase": "Sistem Informasi"
+  },
+  {
+    "nidn": 139893842,
+    "nama": "Dosen 2",
+    "tglLahir": "29-06-1979",
+    "alamat": "Alamat Dosen 2",
+    "homebase": "Informatika"
+  },
+  {
+    "nidn": 142323223,
+    "nama": "Dosen 3",
+    "tglLahir": "11-12-1985",
+    "alamat": "Alamat Dosen 3",
+    "homebase": "Akuntansi"
+  },
+  {
+    "nidn": 153232243,
+    "nama": "Dosen 4",
+    "tglLahir": "12-08-1990",
+    "alamat": "Alamat Dosen 4",
+    "homebase": "Informatika"
+  },
+  {
+    "nidn": 167384738,
+    "nama": "Dosen 5",
+    "tglLahir": "19-01-1985",
+    "alamat": "Alamat Dosen 5",
+    "homebase": "Sains Data"
+  }
+]

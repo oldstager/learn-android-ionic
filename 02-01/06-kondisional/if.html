@@ -1,0 +1,33 @@
+<div id="app">
+  <p v-if='terlihat'>Universitas Terbuka<p>
+  <button v-on:click="onOff">{{ aksi }}</button>
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        terlihat: true,
+        aksi: 'Sembunyikan' 
+      };
+    },
+    methods: {
+      onOff() {
+        if (this.aksi === 'Sembunyikan') {
+          this.aksi = 'Tampilkan';
+          this.terlihat = false;
+        } else {
+          this.aksi = 'Sembunyikan';
+          this.terlihat = true;
+        }
+      }
+    }
+  };
+
+  createApp(App).mount("#app");
+</script>
+

@@ -1,0 +1,6 @@
+LATIHAN
+Tambahkan fasilitas di aplikasi tersebut untuk mengetahui nama lokasi menggunakan fasilitas dari plugin Geocoder.
+
+File asli untuk yang 9-2 ada di src/views/Kamera-Geolocation-asli-92-tanpa-geocoder.txt
+Selanjutnya file src/views/Kamera.vue akan menampung 9-2 + latihan
+

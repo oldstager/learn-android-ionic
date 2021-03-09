@@ -1,0 +1,21 @@
+<div id="app">
+  <p>Jumlah klik: {{ jumlahKlik }}</p>
+  <button @click="jumlahKlik += 1">Klik untuk menambah 1</button  
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        jumlahKlik: 0
+      };
+    },
+  };
+
+  createApp(App).mount("#app");
+</script>
+

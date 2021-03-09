@@ -1,0 +1,19 @@
+<div id="app">
+  Halo {{ name }}
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        name: "Vue"
+      };
+    },
+  };
+
+  createApp(App).mount("#app");
+</script>

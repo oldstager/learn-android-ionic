@@ -1,0 +1,7 @@
+{
+  "name": "cats63App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

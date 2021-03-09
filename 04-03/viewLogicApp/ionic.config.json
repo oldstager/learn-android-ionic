@@ -1,0 +1,7 @@
+{
+  "name": "firstIonicBlank",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

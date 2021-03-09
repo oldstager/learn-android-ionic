@@ -1,0 +1,29 @@
+<div id="app">
+  <p>Universitas Terbuka<p>
+  <ol>
+    <li v-for="mk in daftarMK" v-bind:key="mk.text">
+      {{ mk.text }}
+    </li>
+  </ol>      
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        daftarMK: [
+          { text: 'Algoritma Pemrograman' },
+          { text: 'Pemrograman Perangkat Bergerak' },
+          { text: 'Sistem Terdistribusi' }
+        ]
+      };
+    },
+  };
+
+  createApp(App).mount("#app");
+</script>
+

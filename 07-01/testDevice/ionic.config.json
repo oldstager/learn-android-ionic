@@ -1,0 +1,7 @@
+{
+  "name": "testDevice",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

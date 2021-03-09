@@ -1,0 +1,35 @@
+<div id="app">
+  <p>Jumlah klik: {{ jumlahKlik }}</p>
+  <p>Faktorial dari {{ jumlahKlik }} adalah {{ faktorial }}</p>
+  <p>
+    <button @click="tambahKlik(), factorial(jumlahKlik)">Klik untuk menambah 1</button>
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        jumlahKlik: 0,
+        faktorial: 1
+      };
+    },
+    methods: {
+      tambahKlik() {
+        this.jumlahKlik += 1;
+      },
+      factorial(num) {
+        var rval=1;
+        for (var i = 2; i <= num; i++)
+          rval = rval * i;
+        this.faktorial = rval;
+      }
+    }
+  };
+
+  createApp(App).mount("#app");
+</script>
+

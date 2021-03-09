@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <style>
+
+.rectangle {
+  width: 500px;
+  height: 100px;
+  background: rgba(0, 0, 255, 0.5);
+}
+    </style>
+  </head>
+  <body>
+   <script>
+
+import { createGesture } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/esm/index.mjs';
+
+let p = document.querySelector('p');
+const gesture = createGesture({
+  el: document.querySelector('.rectangle'),
+  onMove: (detail) => { onMove(detail); }
+})
+
+gesture.enable(true);
+
+const onMove = (detail) => {
+  const type = detail.type;
+  const currentX = detail.currentX;
+  const deltaX = detail.deltaX;
+  const velocityX = detail.velocityX;
+    
+  p.innerHTML = `
+    <div>Type: ${type}</div>
+    <div>Current X: ${currentX}</div>
+    <div>Delta X: ${deltaX}</div>
+    <div>Velocity X: ${velocityX}</div>
+  `
+}
+
+
+    </script>
+    <div class="rectangle"></div>
+    <p>
+      Swipe to start tracking
+    </p>
+  </body>
+</html>

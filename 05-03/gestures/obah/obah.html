@@ -1,0 +1,41 @@
+<html ng-app="starter">
+ 
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+  <title>Ionic Framework Example</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+  <script src="script.js"></script>
+</head>
+ 
+<body>
+  
+  <ion-nav-bar class="bar-positive"></ion-nav-bar>
+  
+  <ion-nav-view></ion-nav-view>
+  
+  <script id="home.html" type="text/ng-template">
+    <ion-view view-title="Touch gestures example">  
+    
+      <ion-content class="padding"
+                   id="content"
+                   on-swipe-up="onGesture('Swipe Up')"
+                   on-swipe-right="onGesture('Swipe Right')"
+                   on-swipe-down="onGesture('Swipe Down')"
+                   on-swipe-left="onGesture('Swipe Left')"
+                   on-hold="onGesture('Hold')"
+                   on-double-tap="onGesture('Double-Tap')">
+
+          <h2 style="text-align: center;">Use any touch gesture on this page</h2> 
+          <h2 style="text-align: center;">Used touch gesture: {{gesture.used}}</h2>  
+   
+      </ion-content>
+      
+    </ion-view>
+  </script>  
+
+</body>
+ 
+</html>

@@ -1,0 +1,55 @@
+[
+   {
+      "id": 1,
+      "name":"Tom Cruise",
+      "bornAt":"Syracuse, NY",
+      "birthDate":"July 3, 1962",
+      "photo":"https://jsonformatter.org/img/tom-cruise.jpg",
+      "wife":null,
+      "weight":67.5,
+      "hasChildren":true,
+      "hasGreyHair":false,
+      "filmography":[
+         "Endless Love",
+         "The Outsiders",
+         "Top Gun",
+         "The Color of Money",
+         "Rain Man",
+         "Born on the Fourth of July",
+         "Top Gun: Maverick",
+         "Mission Impossible - 7"
+      ],
+      "children":[
+         "Suri",
+         "Isabella Jane",
+         "Connor"
+      ]
+   },
+   {
+      "id": 2,
+      "name":"Robert Downey Jr.",
+      "bornAt":"New York City, NY",
+      "birthDate":"April 4, 1965",
+      "photo":"https://jsonformatter.org/img/Robert-Downey-Jr.jpg",
+      "wife":"Susan Downey",
+      "weight":77.1,
+      "hasChildren":true,
+      "hasGreyHair":false,
+      "filmography": [
+         "Pound",
+         "Up the Academy",
+         "Firstborn",
+         "Johny Be Good",
+         "True Believer",
+         "Too Much Sun",
+         "The Singing Detective",
+         "Iron Man 2",
+         "Avengers: End Game"
+      ],
+      "children":[
+         "Indio Falconer",
+         "Avri Roel",
+         "Exton Elias"
+      ]
+   }
+]

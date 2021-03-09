@@ -1,0 +1,24 @@
+<div id="app">
+  <button @click.once="tampilPesan">Klik sekali saja!</button  
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        jumlahKlik: 0
+      };
+    },
+    methods: {
+      tampilPesan() {
+        alert("Hanya boleh klik sekali saja, setelah itu tidak bisa");
+      }
+    }
+  };
+
+  createApp(App).mount("#app");
+</script>

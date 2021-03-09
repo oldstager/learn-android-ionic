@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <style>
+
+      .square {  
+        width: 100px;
+        height: 100px;
+        background: rgba(0, 0, 255, 0.5);
+      }
+
+      .track {
+        width: 100%;
+        max-width: 500px;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+  </head>
+  <body>
+    <div class="track">
+      <div class="square"></div>
+    </div>
+    <p>Drag the square along the track.</p>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+   <script>
+
+      let initialStep = 0;
+      let started = false;
+
+      const square = document.querySelector('.square');
+      const MAX_TRANSLATE = document.querySelector('.track').clientWidth - 100;
+
+      const animation = createAnimation()
+        .addElement(square)
+        .duration(1000)
+        .fromTo('transform', 'translateX(0)', `translateX(${MAX_TRANSLATE}px)`);
+
+      const gesture = createGesture({
+        el: square,
+        threshold: 0,
+        onMove: ev => onMove(ev),
+        onEnd: ev => onEnd(ev)
+      })
+
+      gesture.enable(true);
+
+      const onMove = (ev) => {
+        if (!started) {
+          animation.progressStart();
+          started = true;
+        }
+
+        animation.progressStep(getStep(ev));
+      }
+
+      const onEnd = (ev) => {
+        if (!started) { return; }
+
+          gesture.enable(false);
+
+          const step = getStep(ev);
+          const shouldComplete = step > 0.5;
+
+          animation
+            .progressEnd((shouldComplete) ? 1 : 0, step)
+            .onFinish(() => { gesture.enable(true); });
+
+          initialStep = (shouldComplete) ? MAX_TRANSLATE : 0;
+          started = false;
+      }
+
+      const clamp = (min, n, max) => {
+        return Math.max(min, Math.min(n, max));
+      };
+
+      const getStep = (ev) => {
+        const delta = initialStep + ev.deltaX;
+        return clamp(0, delta / MAX_TRANSLATE, 1);
+      }
+
+    </script>
+  </body>
+</html>

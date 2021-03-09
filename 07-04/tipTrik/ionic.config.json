@@ -1,0 +1,7 @@
+{
+  "name": "tipTrik",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

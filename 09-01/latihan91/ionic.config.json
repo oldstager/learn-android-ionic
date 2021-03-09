@@ -1,0 +1,7 @@
+{
+  "name": "nicePlace",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

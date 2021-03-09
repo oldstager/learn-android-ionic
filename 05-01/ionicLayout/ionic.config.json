@@ -1,0 +1,7 @@
+{
+  "name": "ionicLayout",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

@@ -1,0 +1,26 @@
+<div id="app">
+  <p>{{ pesan }}</p>
+  <button v-on:click="reverseStr">Balik String</button  
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        pesan: "Universitas Terbuka",
+      };
+    },
+    methods: {
+      reverseStr() {
+        this.pesan = this.pesan.split('').reverse().join('')
+      }
+    }
+  };
+
+  createApp(App).mount("#app");
+</script>
+

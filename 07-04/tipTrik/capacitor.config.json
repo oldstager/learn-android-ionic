@@ -1,0 +1,13 @@
+{
+  "appId": "io.maska.app",
+  "appName": "tipTrik",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 5000
+    }
+  },
+  "cordova": {}
+}

@@ -1,0 +1,33 @@
+<div id="app">
+  <ol>
+    <li v-for="prg in proglang">
+      {{ prg }}
+    </li> 
+  </ol>
+</div>
+
+<script src="http://unpkg.com/vue@next"></script>
+
+<script>
+  const { createApp } = Vue;
+
+  const App = {
+    data() {
+      return {
+        proglang: ['TypeScript', 'Rust', 'Go', 'Zig', 'JavaScript']
+      };
+    },
+  };
+
+  createApp(App).mount("#app");
+</script>
+
+<!-- hasil:
+
+1. TypeScript
+2. Rust
+3. Go
+4. Zig
+5. JavaScript
+
+-->
